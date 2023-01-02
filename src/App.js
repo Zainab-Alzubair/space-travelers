@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Missions from './components/Missions';
-import Rockets from './components/Rockets';
-import MyProfile from './components/MyProfile';
+import Missions from './components/pages/Missions';
+import Rockets from './components/pages/Rockets';
+import MyProfile from './components/pages/MyProfile';
 
 function App() {
   return (

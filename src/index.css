@@ -1,5 +1,6 @@
 body {
   background-color: white;
+  margin: 0;
 }
 
 .logo {
@@ -18,7 +19,9 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  margin: 30px 100px;
+  width: 100%;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.315);
 }
 
 .nav-links-container {
@@ -37,4 +40,14 @@ header {
 
 .active {
   border-bottom: 2px solid black;
+}
+
+.rocket-container {
+  display: flex;
+  margin: 20px 50px;
+  gap: 20px;
+}
+
+.rocket-img {
+  width: 250px;
 }
