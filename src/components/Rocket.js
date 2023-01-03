@@ -9,6 +9,7 @@ const Rocket = (props) => {
       <div className="rocket-info">
         <h3 className="rocket-name">{name}</h3>
         <p className="rocket-description">{description}</p>
+        <button type="button" className="reserve-btn">Reserve Rocket</button>
       </div>
     </div>
   );
