@@ -1,0 +1,7 @@
+const ActionTypes = {
+  SET_MISSIONS: 'SET_MISSIONS',
+  MISSION_RESERVED: 'MISSION_RESERVED',
+  MISSION_CANCELED: 'MISSION_CANCELED',
+};
+
+export default ActionTypes;
