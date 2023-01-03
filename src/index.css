@@ -51,3 +51,82 @@ header {
 .rocket-img {
   width: 250px;
 }
+
+/* Missions page style */
+.mission__container {
+  margin-top: 40px;
+}
+
+.table {
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 90%;
+  margin: 0 0 auto 2rem;
+}
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+}
+
+.row:nth-child(2n+1) {
+  background-color: rgb(242, 242, 242);
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.head {
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+.name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+.column {
+  text-align: left;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(221, 221, 221);
+  border-image: initial;
+  padding: 10px 10px 1.8rem;
+  width: 200px;
+}
+
+th {
+  display: table-cell;
+  font-weight: bold;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.status {
+  background: rgb(111, 114, 117);
+  width: fit-content;
+  border-radius: 0.5rem;
+  padding: 0.5rem  1rem 0.5rem 1rem;
+  color: aliceblue;
+  margin: 0 auto;
+}
+
+.button {
+  width: fit-content;
+  border-radius: 0.5rem;
+  padding: 0.5rem  1rem 0.5rem 1rem;
+  margin: 0 auto;
+}
