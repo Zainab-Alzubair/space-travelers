@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Mission = () => {
-  const missions = useSelector((state) => state.allMissions.missions);
+  const missions = useSelector((state) => state.missionReducer.missions);
 
   const renderList = missions.map((mission) => {
     const name = mission.mission_name;
