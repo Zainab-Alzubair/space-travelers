@@ -35,7 +35,7 @@ export const fetchRocketsApi = () => async (dispatch) => {
 const bookRockets = (state, payload) => {
   const newState = state.map((rocket) => {
     if (rocket.id !== payload) return rocket;
-    return { ...rocket, reserved: true };
+    return { ...rocket, reserved: !rocket.reserved };
   });
   return newState;
 };
