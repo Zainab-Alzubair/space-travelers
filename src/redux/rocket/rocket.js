@@ -1,9 +1,15 @@
 import Axios from 'axios';
 
 const FETCH_ROCKETS = 'space-travelers/rockets/FETCH_ROCKETS';
+const RESERVE_ROCKETS = 'space-travelers/rockets/RESERVE_ROCKETS';
 
 const fetchRockets = (payload) => ({
   type: FETCH_ROCKETS,
+  payload,
+});
+
+export const reserveRockets = (payload) => ({
+  type: RESERVE_ROCKETS,
   payload,
 });
 
@@ -26,12 +32,22 @@ export const fetchRocketsApi = () => async (dispatch) => {
   dispatch(fetchRockets(rockets));
 };
 
+const bookRockets = (state, payload) => {
+  const newState = state.map((rocket) => {
+    if (rocket.id !== payload) return rocket;
+    return { ...rocket, reserved: true };
+  });
+  return newState;
+};
+
 const initialState = [];
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ROCKETS:
       return action.payload;
+    case RESERVE_ROCKETS:
+      return bookRockets(state, action.payload);
     default:
       return state;
   }
