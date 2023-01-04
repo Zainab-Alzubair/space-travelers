@@ -4,12 +4,13 @@ body {
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 80px;
 }
 
 .logo-container {
   display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .app-title {
@@ -19,8 +20,9 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 30px 0;
+  align-items: center;
+  margin: 0 30px;
+  padding: 10px 0 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.315);
 }
 
@@ -28,19 +30,28 @@ header {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 20px;
   list-style: none;
 }
 
+.nav-links-container li {
+  padding: 0 10px;
+}
+
+.nav-links-container li:nth-child(2) {
+  border-right: 3px solid rgba(0, 0, 0, 0.308);
+}
+
 .nav-links-container li a {
-  color: black;
+  color: #0290ff;
   text-decoration: none;
-  padding: 0 0 10px 0;
+  padding: 0 0 5px 0;
 }
 
 .active {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #0290ff;
 }
+
+/* START Rockets page style */
 
 .rocket-container {
   display: flex;
@@ -51,6 +62,18 @@ header {
 .rocket-img {
   width: 250px;
 }
+
+.reserve-btn {
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  padding: 10px 15px;
+  background-color: #0290ff;
+}
+
+/* END Rockets page style */
 
 /* START Missions page style */
 .mission__container {

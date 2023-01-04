@@ -1,27 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Rocket from '../Rocket';
+import { fetchRocketsApi } from '../../redux/rocket/rocket';
 
 const Rockets = () => {
-  const rocketsData = [
-    {
-      id: 0,
-      name: 'Lorem 1',
-      image: 'https://cdn.mos.cms.futurecdn.net/qTmvroik2NtHVGsfCHyyxF-970-80.jpg.webp',
-      description: 'Lorem 1',
-    },
-    {
-      id: 1,
-      name: 'Lorem 2',
-      image: 'https://cdn.mos.cms.futurecdn.net/qTmvroik2NtHVGsfCHyyxF-970-80.jpg.webp',
-      description: 'Lorem 2',
-    },
-    {
-      id: 2,
-      name: 'Lorem 3',
-      image: 'https://cdn.mos.cms.futurecdn.net/qTmvroik2NtHVGsfCHyyxF-970-80.jpg.webp',
-      description: 'Lorem 3',
-    },
-  ];
+  const rocketsData = useSelector((state) => state.rocketsReducer);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchRocketsApi());
+  }, [dispatch]);
   return (
     <main>
       {
