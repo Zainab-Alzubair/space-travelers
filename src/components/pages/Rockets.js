@@ -7,7 +7,9 @@ const Rockets = () => {
   const rocketsData = useSelector((state) => state.rocketsReducer);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchRocketsApi());
+    if (rocketsData.length === 0) {
+      dispatch(fetchRocketsApi());
+    }
   }, [dispatch]);
   return (
     <main>
