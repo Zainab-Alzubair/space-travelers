@@ -8,7 +8,7 @@ const MyProfile = () => {
   return (
     <main>
       <div>
-        <h1>My Rockets</h1>
+        <h2>My Rockets</h2>
         <div>
           {
             reserved.map((rocket) => (
@@ -16,6 +16,8 @@ const MyProfile = () => {
             ))
           }
         </div>
+        <h2>My Missions</h2>
+        <div />
       </div>
     </main>
   );
