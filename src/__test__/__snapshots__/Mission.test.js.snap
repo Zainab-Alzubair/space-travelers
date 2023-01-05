@@ -5,10 +5,78 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
+      <div
+        class="mission__container"
+      >
+        <table
+          class="table"
+        >
+          <thead>
+            <tr
+              class="header-row"
+            >
+              <th
+                class="column head"
+              >
+                Mission
+              </th>
+              <th
+                class="column head"
+              >
+                Description
+              </th>
+              <th
+                class="column head"
+              >
+                Status
+              </th>
+              <th
+                class="column head"
+              >
+                 
+              </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
       ,
     </div>
   </body>,
   "container": <div>
+    <div
+      class="mission__container"
+    >
+      <table
+        class="table"
+      >
+        <thead>
+          <tr
+            class="header-row"
+          >
+            <th
+              class="column head"
+            >
+              Mission
+            </th>
+            <th
+              class="column head"
+            >
+              Description
+            </th>
+            <th
+              class="column head"
+            >
+              Status
+            </th>
+            <th
+              class="column head"
+            >
+               
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </div>
     ,
   </div>,
   "debug": [Function],
