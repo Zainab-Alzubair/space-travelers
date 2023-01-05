@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-import Mission from '../Mission';
-import setMissions from '../../redux/missons/actions/missionActions';
+import Mission from './pages/Mission';
+import setMissions from '../redux/missons/actions/missionActions';
 
 const Missions = () => {
   const dispatch = useDispatch();

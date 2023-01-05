@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { joinMission } from '../redux/missons/actions/missionActions';
+import { joinMission } from '../../redux/missons/actions/missionActions';
 
 const Mission = () => {
   const missions = useSelector((state) => state.missionReducer.missions);
