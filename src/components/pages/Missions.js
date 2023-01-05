@@ -33,6 +33,7 @@ const Missions = () => {
     if (missionsData.length === 0) {
       fetchMissions();
     }
+    // eslint-disable-next-line
   }, []);
 
   return (
