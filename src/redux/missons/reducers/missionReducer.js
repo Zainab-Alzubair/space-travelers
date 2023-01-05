@@ -17,7 +17,7 @@ const missionReducer = (state = initialState, { type, payload }) => {
 
           return {
             ...mission,
-            joined: true,
+            joined: !mission.joined,
           };
         }),
       };
