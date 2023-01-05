@@ -9,7 +9,7 @@ const Missions = () => {
   const missionsData = useSelector((state) => state.missionReducer.missions);
   const fetchMissions = async () => {
     const response = await axios
-      .get('http://api.spacexdata.com/v3/missions');
+      .get('https://api.spacexdata.com/v3/missions');
 
     const { data } = response;
 
