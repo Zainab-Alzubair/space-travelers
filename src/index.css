@@ -174,12 +174,31 @@ tbody {
   margin: 0 auto;
 }
 
+.active-status {
+  background: rgb(24, 162, 184);
+  width: fit-content;
+  border-radius: 0.2rem;
+  padding: 0.2rem  0.5rem 0.2rem 0.5rem;
+  color: aliceblue;
+  margin: 0 auto;
+}
+
 .button {
   width: fit-content;
   border-radius: 0.2rem;
   padding: 0.5rem  1rem 0.5rem 1rem;
   margin: 0 auto;
   cursor: pointer;
+  border: 1px solid black;
+}
+
+.leave-btn {
+  width: fit-content;
+  border-radius: 0.2rem;
+  padding: 0.5rem  1rem 0.5rem 1rem;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid red;
 }
 
 /* END Missions page style */
