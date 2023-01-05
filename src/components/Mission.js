@@ -6,7 +6,9 @@ const Mission = () => {
   const missions = useSelector((state) => state.missionReducer.missions);
   const dispatch = useDispatch();
   const renderList = missions.map((mission) => {
-    const { name, id, description } = mission;
+    const {
+      name, id, description, joined,
+    } = mission;
 
     const clickHandler = () => {
       dispatch(joinMission(mission.id));
@@ -19,10 +21,14 @@ const Mission = () => {
             <td className="column name">{name}</td>
             <td className="column description">{description}</td>
             <td className="column status_column">
-              <p className="status">NOT A MEMBER</p>
+              {!joined
+                ? <p className="status">NOT A MEMBER</p>
+                : <p className="active-status">Active MEMBER</p>}
             </td>
             <td className="column column_button">
-              <button type="button" className="button" onClick={clickHandler}>Join Mission</button>
+              {!joined ? <button type="button" className="button" onClick={clickHandler}>Join Mission</button>
+                : <button type="button" className="leave-btn" onClick={clickHandler}>Leave Mission</button>}
+
             </td>
           </tr>
         </tbody>
