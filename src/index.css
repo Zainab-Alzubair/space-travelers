@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap');
+
+body {
+  background-color: white;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  width: 80px;
+}
+
+.logo-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.app-title {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px;
+  padding: 10px 0 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.315);
+}
+
+.nav-links-container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+
+.nav-links-container li {
+  padding: 0 10px;
+}
+
+.nav-links-container li:nth-child(2) {
+  border-right: 3px solid rgba(0, 0, 0, 0.308);
+}
+
+.nav-links-container li a {
+  color: #0290ff;
+  text-decoration: none;
+  padding: 0 0 5px 0;
+}
+
+.active {
+  border-bottom: 2px solid #0290ff;
+}
+
+/* START Rockets page style */
+
+.rocket-container {
+  display: flex;
+  margin: 20px 50px;
+  gap: 20px;
+}
+
+.rocket-img {
+  width: 250px;
+}
+
+.reserve-btn {
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  padding: 10px 15px;
+  background-color: #0290ff;
+  border: 1px solid transparent;
+}
+
+.cancel-btn {
+  border-radius: 4px;
+  color: #6c747d;
+  cursor: pointer;
+  height: 40px;
+  padding: 10px 15px;
+  border: 1px solid #6c747d;
+  background-color: transparent;
+}
+
+span {
+  background-color: #19a3b8;
+  text-align: center;
+  display: inline-flex;
+  padding: 3px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* END Rockets page style */
+
+/* START Missions page style */
+
+.mission__container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.table {
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 90%;
+  margin: 0 0 auto 2rem;
+}
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+}
+
+.row:nth-child(2n+1) {
+  background-color: rgb(242, 242, 242);
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.head {
+  font-size: 1.3rem;
+  padding: 10px;
+  background-color: white;
+}
+
+.name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+.column {
+  text-align: left;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(221, 221, 221);
+  border-image: initial;
+  padding: 10px 10px 1.8rem;
+}
+
+th {
+  display: table-cell;
+  font-weight: bold;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.status {
+  background: rgb(111, 114, 117);
+  width: 120px;
+  border-radius: 0.2rem;
+  padding: 0.2rem  0.5rem 0.2rem 0.5rem;
+  color: aliceblue;
+  margin: 0 auto;
+}
+
+.active-status {
+  background: rgb(24, 162, 184);
+  width: 120px;
+  border-radius: 0.2rem;
+  padding: 0.2rem  0.5rem 0.2rem 0.5rem;
+  color: aliceblue;
+  margin: 0 auto;
+}
+
+.button {
+  width: 120px;
+  border-radius: 0.2rem;
+  padding: 0.5rem  1rem 0.5rem 1rem;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.leave-btn {
+  width: 120px;
+  border-radius: 0.2rem;
+  padding: 0.5rem  1rem 0.5rem 1rem;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid red;
+}
+
+/* END Missions page style */
+
+/* START My Profile page style */
+
+.profile-main {
+  display: flex;
+  justify-content: center;
+}
+
+.missions-rockets-names {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+}
+
+.reservation-title {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.profile-item {
+  width: 45%;
+}
+
+.user-reservations-container {
+  border: 1px solid rgba(0, 0, 0, 0.301);
+}
+
+.no-reserved {
+  padding-left: 25px;
+}
+
+.user-reservations {
+  font-weight: 400;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+  margin: 0;
+  padding: 15px 0 15px 25px;
+}
+
+/* END My Profile page style */
