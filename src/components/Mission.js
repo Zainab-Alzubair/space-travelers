@@ -15,24 +15,24 @@ const Mission = () => {
     };
 
     return (
-    
-        <tbody>
-          <tr className="row">
-            <td className="column name">{name}</td>
-            <td className="column description">{description}</td>
-            <td className="column status_column">
-              {!joined
-                ? <p className="status">NOT A MEMBER</p>
-                : <p className="active-status">Active MEMBER</p>}
-            </td>
-            <td className="column column_button">
-              {!joined ? <button type="button" className="button" onClick={clickHandler}>Join Mission</button>
-                : <button type="button" className="leave-btn" onClick={clickHandler}>Leave Mission</button>}
 
-            </td>
-          </tr>
-        </tbody>
-    
+      <tbody key={id}>
+        <tr className="row">
+          <td className="column name">{name}</td>
+          <td className="column description">{description}</td>
+          <td className="column status_column">
+            {!joined
+              ? <p className="status">NOT A MEMBER</p>
+              : <p className="active-status">Active MEMBER</p>}
+          </td>
+          <td className="column column_button">
+            {!joined ? <button type="button" className="button" onClick={clickHandler}>Join Mission</button>
+              : <button type="button" className="leave-btn" onClick={clickHandler}>Leave Mission</button>}
+
+          </td>
+        </tr>
+      </tbody>
+
     );
   });
   return (

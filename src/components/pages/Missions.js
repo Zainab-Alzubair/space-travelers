@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import Mission from '../Mission';
 import setMissions from '../../redux/missons/actions/missionActions';
-import { useSelector } from 'react-redux';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -32,7 +31,7 @@ const Missions = () => {
   };
   useEffect(() => {
     if (missionsData.length === 0) {
-    fetchMissions();
+      fetchMissions();
     }
   }, []);
 
@@ -48,9 +47,8 @@ const Missions = () => {
             <th className="column head"> </th>
           </tr>
         </thead>
-      <Mission />
+        <Mission />
       </table>
-
 
     </div>
 
