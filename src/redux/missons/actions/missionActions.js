@@ -5,4 +5,9 @@ const setMissions = (missions) => ({
   payload: missions,
 });
 
+export const joinMission = (missions) => ({
+  type: ActionTypes.MISSION_JOINED,
+  payload: missions,
+});
+
 export default setMissions;

@@ -10,7 +10,24 @@ const Missions = () => {
   const fetchMissions = async () => {
     const response = await axios
       .get('http://api.spacexdata.com/v3/missions');
-    dispatch(setMissions(response.data));
+
+    const { data } = response;
+
+    const missions = [];
+    data.map((mission) => {
+      const name = mission.mission_name;
+      const id = mission.mission_id;
+      const { description } = mission;
+      const joined = false;
+
+      const obj = {
+        id, name, description, joined,
+      };
+      missions.push(obj);
+      return mission;
+    });
+
+    dispatch(setMissions(missions));
   };
   useEffect(() => {
     fetchMissions();
