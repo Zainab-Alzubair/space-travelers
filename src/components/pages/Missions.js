@@ -3,10 +3,11 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import Mission from '../Mission';
 import setMissions from '../../redux/missons/actions/missionActions';
+import { useSelector } from 'react-redux';
 
 const Missions = () => {
   const dispatch = useDispatch();
-
+  const missionsData = useSelector((state) => state.missionReducer.missions);
   const fetchMissions = async () => {
     const response = await axios
       .get('http://api.spacexdata.com/v3/missions');
@@ -30,7 +31,9 @@ const Missions = () => {
     dispatch(setMissions(missions));
   };
   useEffect(() => {
+    if (missionsData.length === 0) {
     fetchMissions();
+    }
   }, []);
 
   return (
@@ -38,16 +41,16 @@ const Missions = () => {
     <div className="mission__container">
       <table className="table">
         <thead>
-          <tr className="row">
+          <tr className="header-row">
             <th className="column head">Mission</th>
             <th className="column head">Description</th>
             <th className="column head">Status</th>
             <th className="column head"> </th>
           </tr>
         </thead>
+      <Mission />
       </table>
 
-      <Mission />
 
     </div>
 

@@ -15,7 +15,7 @@ const Mission = () => {
     };
 
     return (
-      <table className="table" key={id}>
+    
         <tbody>
           <tr className="row">
             <td className="column name">{name}</td>
@@ -32,7 +32,7 @@ const Mission = () => {
             </td>
           </tr>
         </tbody>
-      </table>
+    
     );
   });
   return (

@@ -151,7 +151,6 @@ tr {
   border-color: rgb(221, 221, 221);
   border-image: initial;
   padding: 10px 10px 1.8rem;
-  width: 200px;
 }
 
 th {
@@ -167,16 +166,17 @@ tbody {
 
 .status {
   background: rgb(111, 114, 117);
-  width: fit-content;
+  width: 120px;
   border-radius: 0.2rem;
   padding: 0.2rem  0.5rem 0.2rem 0.5rem;
   color: aliceblue;
   margin: 0 auto;
 }
 
+
 .active-status {
   background: rgb(24, 162, 184);
-  width: fit-content;
+  width: 120px;
   border-radius: 0.2rem;
   padding: 0.2rem  0.5rem 0.2rem 0.5rem;
   color: aliceblue;
@@ -184,7 +184,7 @@ tbody {
 }
 
 .button {
-  width: fit-content;
+  width: 120px;
   border-radius: 0.2rem;
   padding: 0.5rem  1rem 0.5rem 1rem;
   margin: 0 auto;
@@ -193,7 +193,7 @@ tbody {
 }
 
 .leave-btn {
-  width: fit-content;
+  width: 120px;
   border-radius: 0.2rem;
   padding: 0.5rem  1rem 0.5rem 1rem;
   margin: 0 auto;
