@@ -61,7 +61,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://github.com/Zainab-Alzubair/space-travelers)
+- [Live Demo Link](https://aesthetic-cocada-15db6d.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-import Mission from '../Mission';
-import setMissions from '../../redux/missons/actions/missionActions';
+import Mission from './pages/Mission';
+import setMissions from '../redux/missons/actions/missionActions';
 
 const Missions = () => {
   const dispatch = useDispatch();
-
+  const missionsData = useSelector((state) => state.missionReducer.missions);
   const fetchMissions = async () => {
     const response = await axios
-      .get('http://api.spacexdata.com/v3/missions');
+      .get('https://api.spacexdata.com/v3/missions');
 
     const { data } = response;
 
@@ -30,7 +30,10 @@ const Missions = () => {
     dispatch(setMissions(missions));
   };
   useEffect(() => {
-    fetchMissions();
+    if (missionsData.length === 0) {
+      fetchMissions();
+    }
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -38,16 +41,15 @@ const Missions = () => {
     <div className="mission__container">
       <table className="table">
         <thead>
-          <tr className="row">
+          <tr className="header-row">
             <th className="column head">Mission</th>
             <th className="column head">Description</th>
             <th className="column head">Status</th>
             <th className="column head"> </th>
           </tr>
         </thead>
+        <Mission />
       </table>
-
-      <Mission />
 
     </div>
 

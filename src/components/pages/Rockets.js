@@ -10,6 +10,7 @@ const Rockets = () => {
     if (rocketsData.length === 0) {
       dispatch(fetchRocketsApi());
     }
+    // eslint-disable-next-line
   }, [dispatch]);
   return (
     <main>
